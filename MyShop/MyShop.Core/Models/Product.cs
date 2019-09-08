@@ -12,13 +12,13 @@ namespace MyShop.Core.Models
     {
         public string Id { get; set; }
 
-        [StringLength(20)]
+        [StringLength(20, ErrorMessage = "The product name must be less than {1} characters.")]
         [DisplayName("Product Name")]
         public string Name { get; set; }
 
         public string Description { get; set; }
 
-        [Range(0,1000)]
+        [Range(0,1000,ErrorMessage = "Price must be between {1} and {2}.")]
         public decimal Price { get; set; }
 
         public string Category { get; set; }

@@ -21,7 +21,7 @@ namespace MyShop.WebUI.Tests.Controllers
             IRepository<Product> productContext = new Mocks.MockContext<Product>();
             IRepository<ProductCategory> productCatgeoryContext = new Mocks.MockContext<ProductCategory>();
 
-            //productContext.Insert(new Product());
+            productContext.Insert(new Product());
 
             HomeController controller = new HomeController(productContext, productCatgeoryContext);
 
